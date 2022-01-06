@@ -89,7 +89,8 @@ while True:
             subject='Changes in Class Watchlist',
             html_content=f'Current status for {codes} is {update_status}')
         try:
-            sg = SendGridAPIClient('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')
+            # replace the following segment with your own SendGrid API key (free)
+            sg = SendGridAPIClient('INSERT API KEY HERE')
             response = sg.send(message)
             print(response.status_code)
             print(response.body)
